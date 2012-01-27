@@ -1,3 +1,4 @@
+# FIXME : --noop
 PUPPETMASTER='kermit.vmware'
 SSH='ssh -t -A'
 
@@ -18,3 +19,9 @@ task :apply => [:deploy] do
 		end
 	end
 end
+
+task :noop => [:deploy] do
+	client = ENV['CLIENT']
+	sh "#{SSH} #{client} 'puppet agent --test --noop'"
+end
+
