@@ -5,7 +5,3 @@ node elmo {
 node grover {
 	include ntp
 }
-
-node kermit {
-	include ntp
-}
