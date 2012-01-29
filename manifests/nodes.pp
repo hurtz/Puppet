@@ -5,3 +5,7 @@ node elmo {
 node grover {
 	include ntp
 }
+node shithead {
+	include ntp
+}
+
